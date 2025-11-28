@@ -1,2 +1,1 @@
-# Fullstack App
-Project structure. Our purpose
+# Fullsatck app
