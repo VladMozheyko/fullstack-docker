@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frontend + Backend + MySQL</title>
+</head>
+<body>
+    <h1>Frontend работает!</h1>
+    <button onclick="loadUsers()">Загрузить пользователей</button>
+
+    <ul id="users"></ul>
+
+<script>
+function loadUsers() {
+    fetch("http://localhost:5000/users")
+        .then(res => res.json())
+        .then(data => {
+            let list = document.getElementById("users");
+            list.innerHTML = "";
+            data.forEach(user => {
+                let li = document.createElement("li");
+                li.innerText = user;
+                list.appendChild(li);
+            });
+        });
+}
+</script>
+</body>
+</html>
