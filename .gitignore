@@ -1,0 +1,4 @@
+venv/
+mode_modules/
+.__pycache__/
+target/
